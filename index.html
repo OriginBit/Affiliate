@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style></style>
+        </head>
+        <body>
+            
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GXL - Electronics Recommender</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+            color: #4b3621; /* Brown Text */
+            height: 100%;
+            background-color: #f5f5dc; /* Light cream background for the body */
+        }
+
+        /* Header Section with Custom Texture and 3D Effects */
+        header {
+            height: 200px;
+            background: linear-gradient(135deg, rgba(242, 193, 127, 0.8), rgba(218, 160, 99, 0.9)),
+                        url('https://imgur.com/a/bdmY67R'); /* Background texture */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 4em;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        /* Header Text Animation */
+        header h1 {
+            position: relative;
+            animation: headerTextAnimation 2s ease-out;
+        }
+
+        @keyframes headerTextAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Intro Section */
+        .intro {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.5em;
+            background: linear-gradient(to right, #d2b48c, #f5f5dc); /* Gradient applied only to sections */
+            border-radius: 18px; /* Curvy edges */
+            width: calc(70% + 10px); /* 5px extra on both sides */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            border: 2px solid #8b5a2b; /* Elegant Border */
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            margin: 50px auto; /* Centered with reduced margin */
+        }
+
+        /* Hover Zoom Effect for Sections */
+        .intro:hover {
+            transform: scale(1.03); /* Slight zoom-in */
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Shadow increase */
+        }
+
+        /* Buttons Section */
+        .choices {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Smaller gap between the buttons */
+            margin: 30px 0;
+        }
+
+        .choices a {
+            display: inline-block;
+            background-color: #4b3621;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px; /* Smaller padding for buttons */
+            border-radius: 12px;
+            font-size: 1.2em; /* Reduced font size */
+            text-align: center;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, background-color 0.3s ease;
+        }
+
+        .choices a:hover {
+            background-color: #8b5a2b;
+            transform: scale(1.05);
+        }
+
+        /* Description Section */
+        .description {
+            padding: 50px;
+            background: linear-gradient(to right, #d2b48c, #f5f5dc); /* Gradient applied only to sections */
+            border-radius: 18px; /* Curvy edges */
+            width: calc(70% + 10px); /* 5px extra on both sides */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: justify;
+            font-size: 1.2em; /* Slightly smaller font size */
+            line-height: 1.6;
+            border: 2px solid #8b5a2b; /* Elegant Border */
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            margin: 50px auto; /* Centered with reduced margin */
+        }
+
+        /* Hover Zoom Effect for Sections */
+        .description:hover {
+            transform: scale(1.03); /* Slight zoom-in */
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Shadow increase */
+        }
+
+        /* Blank Screens */
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            font-weight: bold;
+            color: #4b3621;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #d2b48c, #f5f5dc); /* Gradient applied only to sections */
+            border: 2px solid #8b5a2b; /* Elegant Border */
+            padding: 50px;
+            margin: 50px auto; /* Centered with reduced margin */
+            width: calc(70% + 10px); /* 5px extra on both sides */
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            border-radius: 18px; /* Curvy edges */
+        }
+
+        /* Hover Zoom Effect for Sections */
+        .section:hover {
+            transform: scale(1.03); /* Slight zoom-in */
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Shadow increase */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4b3621;
+            color: white;
+            font-size: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+
+
+    <!-- Header -->
+    <header style="transform: scale(1);">
+        <h1>GXL</h1>
+    </header>
+
+    <!-- Intro Section -->
+    <div class="intro">
+        <p><strong>Welcome to GXL!</strong> Your ultimate destination for the best electronics recommendations.</p>
+        <p>Explore our premium selection of Laptops, Keyboards, Mice, and PCs. Let us guide you toward the perfect product.</p>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="choices">
+        <a href="#laptops">Laptops</a>
+        <a href="#keyboards">Keyboards</a>
+        <a href="#mice">Mice</a>
+        <a href="#pcs">PCs</a>
+    </div>
+
+    <!-- Description Section -->
+    <div class="description">
+        At <strong>GXL</strong>, we take pride in delivering handpicked electronics recommendations designed to meet every user's needs. Whether you're a gamer looking for cutting-edge PCs, a professional searching for reliable laptops, or simply someone who values top-tier accessories, we’ve got you covered.  
+        <br><br>
+        Our expert team carefully curates every choice to guarantee performance, quality, and value. This is only the beginning – stay tuned as we introduce affiliate deals, reviews, and exclusive content to take your experience to the next level.
+    </div>
+
+    <!-- Blank Screens -->
+    <div id="laptops" class="section">
+        Laptops Section - Coming Soon
+    </div>
+    <div id="keyboards" class="section">
+        Keyboards Section - Coming Soon
+    </div>
+    <div id="mice" class="section">
+        Mice Section - Coming Soon
+    </div>
+    <div id="pcs" class="section">
+        PCs Section - Coming Soon
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 GXL. All rights reserved.
+    </footer>
+
+    <script>
+        // JavaScript for extra header animation effects when scrolling
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.transform = 'scale(1.05)';
+            } else {
+                header.style.transform = 'scale(1)';
+            }
+        });
+    </script>
+
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>
